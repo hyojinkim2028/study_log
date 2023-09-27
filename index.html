@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./main.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>My Study Log</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./index.js" type="module"></script>
+  </head>
+  <body>
+    <div class="title"><h1>Study Log</h1></div>
+
+    <div id="postingbtn" class="btn-center">
+      <button type="button" class="btn btn-success">기록하기</button>
+    </div>
+
+    <div class="postinbox">
+      <div id="postingbox" class="postinbox-child">
+        <div>
+          <input type="date" id="date" placeholder="Date" />
+        </div>
+        <div>
+          <textarea rows="3" cols="30" id="goal" placeholder="Goal"></textarea>
+        </div>
+        <div>
+          <textarea
+            rows="3"
+            cols="30"
+            id="achievement"
+            placeholder="Achievement"
+          ></textarea>
+        </div>
+        <div>
+          <input type="url" id="link" placeholder="Link" />
+        </div>
+        <div>
+          <textarea rows="3" cols="30" id="etc" placeholder="Etc"></textarea>
+        </div>
+        <div>
+          <select
+            id="understanding"
+            class="form-select"
+            id="inputGroupSelect01"
+          >
+            <option selected disabled>Understanding</option>
+            <option value="⭐">⭐</option>
+            <option value="⭐⭐">⭐⭐</option>
+            <option value="⭐⭐⭐">⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+          </select>
+        </div>
+        <div class="btn-center">
+          <button id="submit" type="button" class="btn btn-success">
+            등록
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+    <div class="aline">
+      <table style="padding: 10px">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Goal</th>
+            <th scope="col">Achievement</th>
+            <th scope="col">Link</th>
+            <th scope="col">Etc</th>
+            <th scope="col">Understanding</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
