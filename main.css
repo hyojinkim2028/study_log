@@ -12,6 +12,12 @@ body {
   color: green;
 }
 
+.btn-success {
+  width: 250px;
+  height: 80px;
+  font-size: 2rem;
+}
+
 .btn-center {
   text-align: center;
   margin-right: 20px;
@@ -28,16 +34,26 @@ body {
 
 table {
   width: 90%;
-  border: none;
-  border-collapse: separate;
-  border-spacing: 10px;
-  margin-top: 10px;
 }
 
-thead,
+th {
+  background-color: green;
+  color: white;
+  font-size: 1.4rem;
+  padding: 5px 5px 5px 10px;
+  text-align: center;
+}
+
 tr,
 td {
-  padding: 15px 0px 0px 5px;
+  padding: 15px 15px 15px 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  border: 1px solid green;
+}
+
+tbody {
+  border-bottom: 1px solid green;
 }
 
 .postinbox {
@@ -70,12 +86,12 @@ td {
 .edit,
 .del {
   color: white;
-  height: 30px;
-  width: 50px;
-  text-align: center;
+  height: 100%;
+  width: 100%;
   background: green;
   border: none;
   border-radius: 5px;
+  margin: auto;
 }
 
 .space {
@@ -88,15 +104,6 @@ td {
   background-color: green;
   margin: auto;
   margin-top: 40px;
-}
-
-th {
-  color: green;
-  font-size: 1.4rem;
-}
-
-tr {
-  text-align: left;
 }
 
 #editPopup {

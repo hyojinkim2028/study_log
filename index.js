@@ -41,7 +41,7 @@ const docRef = database
       let understanding = data.understanding
 
       let temp_html = `
-          <tr data-documentId=${id} data-collectionName="study-log">
+          <tr data-documentId=${id} data-collectionName="study-log" style="border-bottom: 1px solid green">
               <td>${date}</td>
               <td>${goal}</td>
               <td>${achievement}</td>

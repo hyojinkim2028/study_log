@@ -15,10 +15,12 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <div class="title"><h1 id="tt">Study Log</h1></div>
+    <div class="title"><h1 style="font-size: 5rem">Study Log</h1></div>
 
     <div id="postingbtn" class="btn-center">
-      <button type="button" class="btn btn-success">기록하기</button>
+      <button type="button" class="btn btn-success">
+        <span style="font-size: 1.5rem">기록하기</span>
+      </button>
     </div>
 
     <div class="postinbox">
@@ -67,17 +69,29 @@
 
     <div class="line"></div>
     <div class="aline">
-      <table style="padding: 10px">
+      <table style="padding: 10px; border-bottom: 1px solid green">
         <thead>
-          <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Goal</th>
-            <th scope="col">Achievement</th>
-            <th scope="col">Link</th>
-            <th scope="col">Etc</th>
-            <th scope="col">Understanding</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
+          <tr style="text-align: center">
+            <th scope="col" style="width: 10%; border: 1px solid white">
+              Date
+            </th>
+            <th scope="col" style="width: 25%; border: 1px solid white">
+              Goal
+            </th>
+            <th scope="col" style="width: 25%; border: 1px solid white">
+              Achievement
+            </th>
+            <th scope="col" style="width: 10%; border: 1px solid white">
+              Link
+            </th>
+            <th scope="col" style="width: 10%; border: 1px solid white">Etc</th>
+            <th scope="col" style="width: 10%; border: 1px solid white">
+              Understanding
+            </th>
+            <th scope="col" style="width: 5%; border: 1px solid white">Edit</th>
+            <th scope="col" style="width: 5%; border: 1px solid white">
+              Delete
+            </th>
           </tr>
         </thead>
         <tbody id="table"></tbody>
