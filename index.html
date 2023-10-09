@@ -12,10 +12,10 @@
     />
     <title>My Study Log</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./index.js" type="module"></script>
+    <script defer src="./index.js"></script>
   </head>
   <body>
-    <div class="title"><h1>Study Log</h1></div>
+    <div class="title"><h1 id="tt">Study Log</h1></div>
 
     <div id="postingbtn" class="btn-center">
       <button type="button" class="btn btn-success">기록하기</button>
@@ -76,16 +76,91 @@
             <th scope="col">Link</th>
             <th scope="col">Etc</th>
             <th scope="col">Understanding</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody id="table"></tbody>
       </table>
     </div>
 
+    <!--  -->
+    <div id="editPopup_mask"></div>
+    <div id="editPopup">
+      <div class="editContainer">
+        <div style="padding-top: 20px; color: green">
+          <h1>Edit Log</h1>
+        </div>
+        <div>
+          <input type="date" id="edit-date" placeholder="Date" />
+        </div>
+        <div>
+          <textarea
+            rows="3"
+            cols="30"
+            id="edit-goal"
+            placeholder="Goal"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            rows="3"
+            cols="30"
+            id="edit-achievement"
+            placeholder="Achievement"
+          ></textarea>
+        </div>
+        <div>
+          <input type="url" id="edit-link" placeholder="Link" />
+        </div>
+        <div>
+          <textarea
+            rows="3"
+            cols="30"
+            id="edit-etc"
+            placeholder="Etc"
+          ></textarea>
+        </div>
+        <div>
+          <select
+            id="edit-understanding"
+            class="form-select"
+            id="inputGroupSelect01"
+          >
+            <option selected disabled>Understanding</option>
+            <option value="⭐">⭐</option>
+            <option value="⭐⭐">⭐⭐</option>
+            <option value="⭐⭐⭐">⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+          </select>
+        </div>
+        <div class="row">
+          <div>
+            <button
+              type="button"
+              class="btn btn-outline-success btns edit-submit"
+            >
+              입력
+            </button>
+            <button id="close" type="button" class="btn btn-success btns">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
   </body>
 </html>

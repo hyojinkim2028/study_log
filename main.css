@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .title {
   display: flex;
   flex-direction: row;
@@ -30,7 +34,17 @@ table {
   margin-top: 10px;
 }
 
+thead,
+tr,
+td {
+  padding: 15px 0px 0px 5px;
+}
+
 .postinbox {
+  text-align: center;
+}
+
+.editPost {
   text-align: center;
 }
 
@@ -41,6 +55,8 @@ table {
   border-radius: 5px;
 
   display: inline-block;
+  width: 40%;
+  height: 90%;
 }
 
 .postinbox-child > div {
@@ -51,13 +67,15 @@ table {
   justify-content: space-between;
 }
 
-button {
+.edit,
+.del {
   color: white;
-  line-height: 50px;
+  height: 30px;
+  width: 50px;
   text-align: center;
   background: green;
   border: none;
-  border-radius: 5pxs;
+  border-radius: 5px;
 }
 
 .space {
@@ -74,13 +92,45 @@ button {
 
 th {
   color: green;
+  font-size: 1.4rem;
 }
 
-.editBox {
-  pointer-events: stroke;
-  border: 2px solid gray;
+tr {
+  text-align: left;
+}
+
+#editPopup {
+  position: absolute;
+  top: 0px;
+  /* bottom: -150%;
+  left: 35%; */
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
-  height: 300px;
+  display: none;
+}
+
+#editPopup_mask {
+  /* 팝업 배경 css */
+  position: fixed;
+  width: 100%;
+  height: 1000px;
+  top: 0px;
+  left: 0px;
+  display: none;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.editContainer {
+  background-color: white;
+  width: 100%;
+  height: 650px;
+  border: 30px solid green;
+  border-radius: 10px;
+
+  padding: 0px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
