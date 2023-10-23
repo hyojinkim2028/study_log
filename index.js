@@ -4,13 +4,13 @@ function createAt() {
   return time
 }
 const firebaseConfig = {
-  apiKey: 'AIzaSyCFGVHQxjx1VHGJPr7p04pJYT2V9qSgBWE',
-  authDomain: 'sparta-b3aff.firebaseapp.com',
-  projectId: 'sparta-b3aff',
-  storageBucket: 'sparta-b3aff.appspot.com',
-  messagingSenderId: '170544802639',
-  appId: '1:170544802639:web:a1aaafc9f25bde5a5d733a',
-  measurementId: 'G-9FNSVJPZX2',
+  apiKey: ,
+  authDomain: ,
+  projectId: ,
+  storageBucket: ,
+  messagingSenderId: ,
+  appId: ,
+  measurementId: ,
 }
 
 firebase.initializeApp(firebaseConfig)
